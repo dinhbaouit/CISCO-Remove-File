@@ -5,7 +5,11 @@ Downloaded the vulnerable code and compared it with the code from local environm
 
 When this path exists +CSCOE+/session_password.html this means the vulnerability isn't patched , and if the response is 404 that means the vulnerability is patched
 
+Vuln:
 ![password](password.png)
+
+Patched:
+![fixed](fixed.png)
 
 ## Exploiting the vulnerability on local environment:
 Trying to download a file:
